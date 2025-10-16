@@ -1,0 +1,53 @@
+# =========================================================
+# SPARK STREAMING PROJECT GITIGNORE
+# Keeps ONLY code + 3 final CSV outputs per task
+# =========================================================
+
+# ---- Ignore all checkpoints completely ----
+checkpoints/
+**/checkpoints/
+*/checkpoints/
+**/_spark_metadata/
+**/_SUCCESS
+**/.spark-staging/
+**/*.crc
+**/.spark-checkpoint/
+**/checkpoint/
+
+# ---- Python, system, and editor junk ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+.idea/
+.vscode/
+.env
+
+# ---- Ignore everything under output by default ----
+output/**
+
+# ---- Unignore ONLY the 9 selected CSVs ----
+!output/task1/
+!output/task2/
+!output/task3/
+
+!output/task1/part-00000-b9567be3-e4c6-43fb-b463-867b878578ee-c000.csv
+!output/task1/part-00000-b2c6ceca-4243-4822-b254-3805a5c44830-c000.csv
+!output/task1/part-00000-b79834b9-b595-4d3a-ad41-c090fc5067eb-c000.csv
+
+!output/task2/epoch=5/
+!output/task2/epoch=21/
+!output/task2/epoch=27/
+!output/task2/epoch=5/part-00000-ad6a3adc-1096-41af-9204-f24053a84519-c000.csv
+!output/task2/epoch=21/part-00000-06806c3a-5499-4cca-92ce-777d2891df15-c000.csv
+!output/task2/epoch=27/part-00000-42eec56e-bf16-45e9-b427-b4c51122f9dc-c000.csv
+
+!output/task3/epoch=16/
+!output/task3/epoch=23/
+!output/task3/epoch=30/
+!output/task3/epoch=16/part-00000-4d9937ec-8952-449b-9bf3-9e9c9f98f59f-c000.csv
+!output/task3/epoch=23/part-00000-02deef9f-dff0-4ee2-953b-9d8b5f980105-c000.csv
+!output/task3/epoch=30/part-00000-193cae67-8b9a-4c72-841a-b613a90c32d0-c000.csv
